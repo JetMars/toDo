@@ -1,1 +1,14 @@
 @import "./libs/normalize";
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .title {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+}

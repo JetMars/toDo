@@ -1,0 +1,32 @@
+.input {
+  width: min(70vw, 400px);
+  height: 25px;
+  border-radius: 6px;
+  border: 2px solid #d6d6d6;
+  text-align: center;
+  font-size: 14px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  &:focus {
+    color: #212529;
+    border-color: #6268b7;
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem rgba(158, 158, 158, 0.25);
+    transition: border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+  }
+  &::placeholder {
+    color: #212529;
+    opacity: 0.4;
+  }
+}
+
+.button {
+  margin: 0 2px;
+  width: 48px;
+  height: 30px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 5px;
+  background: #4676d7;
+  color: #fff;
+  font-size: 14px;
+}
