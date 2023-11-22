@@ -5,7 +5,7 @@ import type { ITaskItems } from "../../types/toDo";
 import type { ITask } from "../../types/toDo";
 
 const initialState: ITaskItems = {
-  items: [],
+  items: [{ id: "", title: "Marsel" }],
 };
 
 export const toDoSlice = createSlice({

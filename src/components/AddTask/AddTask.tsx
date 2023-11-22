@@ -35,6 +35,7 @@ const AddTask: React.FC = () => {
     <div className={styles.root}>
       <input
         ref={inputRef}
+        maxLength={25}
         type="text"
         name="task"
         className={styles.input}
