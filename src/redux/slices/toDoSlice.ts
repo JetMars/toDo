@@ -5,7 +5,7 @@ import type { ITaskItems } from "../../types/toDo";
 import type { ITask } from "../../types/toDo";
 
 const initialState: ITaskItems = {
-  items: [{ id: "", title: "Marsel" }],
+  items: [{ id: "12", title: "Marsel" }],
 };
 
 export const toDoSlice = createSlice({
@@ -15,8 +15,12 @@ export const toDoSlice = createSlice({
     addItem: (state, action: PayloadAction<ITask>) => {
       state.items.push(action.payload);
     },
+    removeItem: (state, action: PayloadAction<string>) => {
+      console.log(action.payload);
+      state.items = state.items.filter((item) => item.id !== action.payload);
+    },
   },
 });
 
-export const { addItem } = toDoSlice.actions;
+export const { addItem, removeItem } = toDoSlice.actions;
 export default toDoSlice.reducer;
