@@ -16,7 +16,6 @@ export const toDoSlice = createSlice({
       state.items.push(action.payload);
     },
     removeItem: (state, action: PayloadAction<string>) => {
-      console.log(action.payload);
       state.items = state.items.filter((item) => item.id !== action.payload);
     },
   },

@@ -11,6 +11,9 @@
   border-radius: 3px;
   margin-left: 8px;
   font-size: 15px;
+  &-active {
+    text-decoration: line-through;
+  }
 }
 
 input[type="checkbox"] {

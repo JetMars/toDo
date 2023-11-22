@@ -9,12 +9,22 @@ import { IoClose } from "react-icons/io5";
 import styles from "./Task.module.scss";
 
 const Task: React.FC<ITask> = ({ id, title }) => {
+  const [active, setActive] = React.useState<boolean>(false);
   const dispatch = useAppDispatch();
 
   return (
     <li className={styles.root}>
-      <input className={styles.checkbox} type="checkbox" name="task" />
-      <label className={styles.title}>{title}</label>
+      <input
+        className={styles.checkbox}
+        type="checkbox"
+        name="task"
+        onChange={() => setActive(!active)}
+      />
+      <label
+        className={`${styles.title} ${active ? styles["title-active"] : ""}`}
+      >
+        {title}
+      </label>
       <IoClose
         onClick={() => dispatch(removeItem(id))}
         className={styles.close}
